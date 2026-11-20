@@ -1,0 +1,4 @@
+import React from 'react';import {Box,Container,Typography,Button} from '@mui/material';import {Link} from 'react-router-dom';
+export function PageHero({eyebrow,title,subtitle}){return <Box className="page-hero"><Typography className="eyebrow">{eyebrow}</Typography><Typography variant="h3" sx={{fontWeight:700,mb:1}}>{title}</Typography><Typography sx={{maxWidth:650,mx:'auto',color:'#d6cbd7'}}>{subtitle}</Typography></Box>}
+export function SectionTitle({eyebrow,title,subtitle}){return <Box sx={{textAlign:'center',mb:4}}><Typography className="eyebrow">{eyebrow}</Typography><Typography variant="h4" sx={{fontWeight:700}}>{title}</Typography>{subtitle&&<Typography color="text.secondary" sx={{mt:1}}>{subtitle}</Typography>}</Box>}
+export function GoldButton({to='/appointments',children='Explore Classes'}){return <Button component={Link} to={to} variant="contained" color="primary" sx={{borderRadius:8,px:3,py:1.1}}>{children}</Button>}
